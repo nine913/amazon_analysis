@@ -35,7 +35,7 @@ df_i = fire[
     (fire['year'].between(start_year, last_year))
 ]
 
-st.subheader('Desforestation (km²)')
+st.subheader('Deforestation (km²)')
 fig_f = px.line(
     df_f, x='year', y='desforestation_km2',
     color='el_nino_label',
@@ -84,3 +84,5 @@ fig_b = px.bar(
     color_discrete_map={'Desforestation (km²)': 'green', 'Fire Incidents': 'orangered'}
 )
 st.plotly_chart(fig_b)
+
+st.sidebar.markdown('Developed by [André](https://github.com/nine913)')
